@@ -21,7 +21,7 @@ class Narrator:
 
         # below are all the story steps sorted out by step/branch
         self.introduction = [introduction,     # introduction
-                            fork_in_the_road]  # Step 1
+                             fork_in_the_road] # Step 1
         self.branch_A = [overgrown_path,       # Step 2A
                          monument,             # Step 3A1
                          living_grass]         # Step 3A2
@@ -53,6 +53,16 @@ class Narrator:
         type_out_words(self.introduction[1])
         self.validate_input()
 
+        # step 1
+        if self.user_choice[0] == "A":
+            type_out_words(self.branch_A[0])
+        elif self.user_choice[0] == "B":
+            type_out_words(self.branch_B[0])
+        self.validate_input()
+
+        # step 2
+        if self.user_choice[1] == "A":
+            type_out_words(self.branch_A[1])
 
 
 narrator = Narrator()
