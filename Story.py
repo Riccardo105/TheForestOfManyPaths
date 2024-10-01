@@ -21,6 +21,7 @@ B) Stay back, observing it from a distance.
 # Triggered if user chooses  B in step 1
 foggy_path = """
 The fog thickens as you continue down the wide path. Soon, you can barely see your hands in front of you. Suddenly, you hear the sound of rushing water nearby, cutting through the mist.
+A) Investigate the source of the water.
 B) Continue walking, trusting the path to lead you out of the fog.
 """
 

@@ -61,8 +61,28 @@ class Narrator:
         self.validate_input()
 
         # step 2
-        if self.user_choice[1] == "A":
+        if self.user_choice[0] == "A" and self.user_choice[1] == "A":
             type_out_words(self.branch_A[1])
+        elif self.user_choice[0] == "A" and self.user_choice[1] == "B":
+            type_out_words(self.branch_A[2])
+        elif self.user_choice[0] == "B" and self.user_choice[1] == "A":
+            type_out_words(self.branch_B[1])
+        elif self.user_choice[0] == "B" and self.user_choice[1] == "B":
+            type_out_words(self.branch_B[2])
+        self.validate_input()
+
+        # step 3
+        type_out_words(self.final_decision)
+        self.validate_input()
+
+        if self.user_choice[0] == "A" and self.user_choice[3] == "A":
+            type_out_words(self.endings[0])
+        elif self.user_choice[0] == "A" and self.user_choice[3] == "B":
+            type_out_words(self.endings[1])
+        elif self.user_choice[0] == "B" and self.user_choice[3] == "A":
+            type_out_words(self.endings[2])
+        elif self.user_choice[0] == "B" and self.user_choice[3] == "B":
+            type_out_words(self.endings[3])
 
 
 narrator = Narrator()
