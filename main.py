@@ -3,7 +3,7 @@ from Story import *
 import os
 
 
-def type_out_words(text, speed=0.02):
+def type_out_words(text, speed=0.25):
     """Prints text to the console as if it is being typed out, word by word."""
     # Split the text into lines and iterate through each line
     for line in text.strip().split('\n'):
